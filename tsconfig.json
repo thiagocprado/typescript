@@ -7,5 +7,5 @@
     "removeComments": true, // remove os comentários do código
     "strictNullChecks": true // não vai permitir valore nulos implicítios
   },
-  "include": ["app/**/*"] // todos os arquivos ts que estão dentro dessa pasta serão convertidos
+  "include": ["app/src/**/*"] // todos os arquivos ts que estão dentro dessa pasta serão convertidos
 }

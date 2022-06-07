@@ -23,7 +23,6 @@ export abstract class View<T> {
   // sendo assim, não precisamos nem definir o bloco de retorno
 
   public update(model: T): void {
-    const t1 = performance.now();
     let template = this.template(model);
 
     if (this.escapar) {
@@ -31,8 +30,5 @@ export abstract class View<T> {
     }
 
     this.elemento.innerHTML = template;
-    const t2 = performance.now();
-    console.log('t1 ' + t1);
-    console.log('t2 ' + t2);
   }
 }

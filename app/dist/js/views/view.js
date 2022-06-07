@@ -13,14 +13,10 @@ export class View {
         }
     }
     update(model) {
-        const t1 = performance.now();
         let template = this.template(model);
         if (this.escapar) {
             template = template.replace(/<script>[\s|\S]*?<\/script>/, "");
         }
         this.elemento.innerHTML = template;
-        const t2 = performance.now();
-        console.log('t1 ' + t1);
-        console.log('t2 ' + t2);
     }
 }
