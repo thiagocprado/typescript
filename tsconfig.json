@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "app/dist/js", // diretóiro onde serão gerados os arquivos js
+    "target": "ES6", // ts será convertido para ecmascript 6
+    "noEmitOnError": true, // não gera um arquivo js enquanto o ts não passar pela compilação
+    "noImplicitAny": true, // não permite que existam valor do tipo ayn implicitamente, é preciso especificar os tipos
+    "removeComments": true, // remove os comentários do código
+    "strictNullChecks": true // não vai permitir valore nulos implicítios
+  },
+  "include": ["app/**/*"] // todos os arquivos ts que estão dentro dessa pasta serão convertidos
+}
