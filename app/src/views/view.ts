@@ -1,3 +1,5 @@
+import { logarTempoExecucao } from "../decorators/logar.tempo.execucao.js";
+
 // generics | classe abstrata não podemos instância-la diretamente
 export abstract class View<T> {
   protected elemento: HTMLElement; // apenas a classe view pode alterar, entretanto as classes filhas podem acessar
@@ -22,6 +24,7 @@ export abstract class View<T> {
   protected abstract template(model: T): string; // o método será implementado pela classe filha
   // sendo assim, não precisamos nem definir o bloco de retorno
 
+  @logarTempoExecucao()
   public update(model: T): void {
     let template = this.template(model);
 
