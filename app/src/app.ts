@@ -14,6 +14,14 @@ if (form) {
   );
 }
 
+const botaoImporta = document.querySelector("#botao-importa");
+if (botaoImporta) {
+  botaoImporta.addEventListener("click", () => {
+    controller.importaDados();
+  });
+} else {
+  throw Error("Botão importa não foi encontrado!");
+}
 // import { Negociacao } from "./models/negociacao.js";
 
 // const negociacao = new Negociacao(new Date(), 10, 100);
